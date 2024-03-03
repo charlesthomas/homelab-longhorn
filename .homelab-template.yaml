@@ -1,0 +1,37 @@
+_commit: v1.6.10
+_src_path: /home/crthomas/code/charlesthomas/homelab-template
+additionalResources: storage-classes.yaml
+backups: false
+helm: true
+helmCrds: false
+helmName: longhorn
+helmRelease: longhorn
+helmRepo: https://charts.longhorn.io
+helmValues: helm/values.yaml
+helmVersion: 1.5.3
+homepageDescription: Storage Handler
+homepageEnabled: true
+homepageGroup: Kubernetes
+homepageIcon: longhorn
+homepageName: Longhorn
+ingClass: nginx-internal
+ingCname: ''
+ingExtraAnnotations: ''
+ingHost: longhorn.crt.house
+ingName: longhorn
+ingPathType: ImplementationSpecific
+ingWebSockets: false
+ingress: true
+labels: ''
+name: longhorn
+namespace: longhorn
+pvc: false
+reloader: false
+resources:
+- ingresses.yaml
+service: false
+serviceAccount: false
+svcName: longhorn-frontend
+svcPortNum: 80
+upstreamURL: https://longhorn.io
+url: https://github.com/charlesthomas/homelab-longhorn

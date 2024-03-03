@@ -1,0 +1,9 @@
+persistence:
+  defaultClassReplicaCount: 2
+
+defaultSettings:
+  backupTarget: nfs://192.168.1.21:/volume1/k3s/longhorn
+  defaultLonghornStaticStorageClass: longhorn
+
+ingress:
+  enabled: false
