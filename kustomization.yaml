@@ -10,6 +10,23 @@ resources:
 - resources/ingresses.yaml
 - resources/namespaces.yaml
 - resources/storage-classes.yaml
+patches:
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: longhorn
+      namespace: longhorn
+      annotations:
+        gethomepage.dev/href: https://longhorn.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: Storage Handler
+        gethomepage.dev/group: Kubernetes
+        gethomepage.dev/icon: longhorn
+        gethomepage.dev/name: Longhorn
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress
 helmCharts:
 - name: longhorn
   namespace: longhorn

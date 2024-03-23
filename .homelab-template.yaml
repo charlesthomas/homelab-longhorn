@@ -1,4 +1,4 @@
-_commit: v1.6.10
+_commit: v1.8.1
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: storage-classes.yaml
 backups: false
@@ -9,11 +9,7 @@ helmRelease: longhorn
 helmRepo: https://charts.longhorn.io
 helmValues: helm/values.yaml
 helmVersion: 1.5.3
-homepageDescription: Storage Handler
 homepageEnabled: true
-homepageGroup: Kubernetes
-homepageIcon: longhorn
-homepageName: Longhorn
 ingClass: nginx-internal
 ingCname: ''
 ingExtraAnnotations: ''
