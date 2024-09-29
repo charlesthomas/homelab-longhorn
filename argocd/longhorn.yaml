@@ -22,3 +22,14 @@ spec:
     syncOptions:
     - ApplyOutOfSyncOnly=true
     - ServerSideApply=true
+  ignoreDifferences:
+    - group: apps
+      kind: DaemonSet
+      jqPathExpressions:
+        - .spec.template.spec.containers[].resources
+    - group: apps
+      kind: Deployment
+      jqPathExpressions:
+        - .spec.template.spec.containers[].resources
+        - .spec.template.spec.initContainers[].resources
+
