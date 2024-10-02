@@ -1,5 +1,5 @@
 persistence:
-  defaultClassReplicaCount: 2
+  defaultClassReplicaCount: 3
 
 defaultSettings:
   backupTarget: nfs://192.168.1.21:/volume1/k3s/longhorn
