@@ -9,6 +9,7 @@ commonAnnotations:
 resources:
 - resources/ingresses.yaml
 - resources/namespaces.yaml
+- resources/recurring-jobs.yaml
 - resources/storage-classes.yaml
 patches:
 - patch: |-
