@@ -21,7 +21,7 @@ metadata:
   namespace: longhorn
 spec:
   concurrency: 1
-  cron: 0 0 * * *
+  cron: 1 1 * * 1
   groups:
   - default
   labels: {}
