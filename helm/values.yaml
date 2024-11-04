@@ -2,7 +2,7 @@ persistence:
   defaultClassReplicaCount: 3
 
 defaultSettings:
-  backupTarget: nfs://192.168.1.21:/volume1/k3s/longhorn
+  backupTarget: nfs://192.168.1.21:/volume1/critical/k3s/longhorn
   defaultLonghornStaticStorageClass: longhorn
 
 ingress:
