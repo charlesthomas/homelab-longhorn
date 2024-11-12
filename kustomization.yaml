@@ -34,4 +34,4 @@ helmCharts:
   releaseName: longhorn
   repo: https://charts.longhorn.io
   valuesFile: helm/values.yaml
-  version: 1.5.3
+  version: 1.5.5
