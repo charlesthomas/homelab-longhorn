@@ -10,7 +10,7 @@ parameters:
   dataLocality: disabled
   fromBackup: ""
   fsType: ext4
-  numberOfReplicas: "3"
+  numberOfReplicas: "2"
   staleReplicaTimeout: "30"
 provisioner: driver.longhorn.io
 reclaimPolicy: Delete
@@ -25,7 +25,7 @@ parameters:
   dataLocality: disabled
   fromBackup: ""
   fsType: ext4
-  numberOfReplicas: "3"
+  numberOfReplicas: "2"
   staleReplicaTimeout: "30"
 provisioner: driver.longhorn.io
 reclaimPolicy: Retain
