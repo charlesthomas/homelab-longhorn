@@ -26,5 +26,7 @@ spec:
   - default
   labels: {}
   name: default-backup-weekly
+  parameters:                                                                    
+    full-backup-interval: "4" 
   retain: 52
   task: backup
