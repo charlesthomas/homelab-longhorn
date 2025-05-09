@@ -1,14 +1,8 @@
 _commit: v1.12.1-6-gbf0c0a5
 _src_path: /Users/crthomas/code/charlesthomas/homelab-template
-additionalResources: recurring-jobs.yaml,storage-classes.yaml
+additionalResources: jobs.yaml,priority-classes.yaml,recurring-jobs.yaml,storage-classes.yaml
 backups: false
-helm: true
-helmCrds: false
-helmName: longhorn
-helmRelease: longhorn
-helmRepo: https://charts.longhorn.io
-helmValues: helm/values.yaml
-helmVersion: 1.5.3
+helm: false
 homepageDescription: Storage Handler
 homepageEnabled: true
 homepageGroup: Kubernetes
@@ -28,7 +22,15 @@ namespace: longhorn
 pvc: false
 reloader: false
 resources:
+- configmaps.yaml
+- crds.yaml
+- daemon-sets.yaml
+- deployments.yaml
 - ingresses.yaml
+- jobs.yaml
+- rbac.yaml
+- service-accounts.yaml
+- services.yaml
 service: false
 serviceAccount: false
 svcName: longhorn-frontend

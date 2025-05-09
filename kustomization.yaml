@@ -7,10 +7,20 @@ commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-longhorn
 
 resources:
+- resources/configmaps.yaml
+- resources/crds.yaml
+- resources/daemon-sets.yaml
+- resources/deployments.yaml
 - resources/ingresses.yaml
+- resources/jobs.yaml
 - resources/namespaces.yaml
+- resources/priority-classes.yaml
+- resources/rbac.yaml
 - resources/recurring-jobs.yaml
+- resources/service-accounts.yaml
+- resources/services.yaml
 - resources/storage-classes.yaml
+
 patches:
 - patch: |-
     apiVersion: networking.k8s.io/v1
@@ -28,10 +38,3 @@ patches:
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
-helmCharts:
-- name: longhorn
-  namespace: longhorn
-  releaseName: longhorn
-  repo: https://charts.longhorn.io
-  valuesFile: helm/values.yaml
-  version: 1.7.2
