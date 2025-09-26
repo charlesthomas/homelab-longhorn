@@ -95,7 +95,7 @@ spec:
             - sh
             - -c
             - echo share-manager image pulled && sleep infinity
-          image: longhornio/longhorn-share-manager:v1.7.2
+          image: longhornio/longhorn-share-manager:v1.10.0
           imagePullPolicy: IfNotPresent
           name: pre-pull-share-manager-image
       priorityClassName: longhorn-critical
