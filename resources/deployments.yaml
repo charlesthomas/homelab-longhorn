@@ -57,7 +57,7 @@ spec:
               value: longhornio/csi-snapshotter:v7.0.2-20241007
             - name: CSI_LIVENESS_PROBE_IMAGE
               value: longhornio/livenessprobe:v2.14.0
-          image: longhornio/longhorn-manager:v1.7.2
+          image: longhornio/longhorn-manager:v1.10.0
           imagePullPolicy: IfNotPresent
           name: longhorn-driver-deployer
       initContainers:
@@ -65,7 +65,7 @@ spec:
             - sh
             - -c
             - while [ $(curl -m 1 -s -o /dev/null -w "%{http_code}" http://longhorn-backend:9500/v1) != "200" ]; do echo waiting; sleep 2; done
-          image: longhornio/longhorn-manager:v1.7.2
+          image: longhornio/longhorn-manager:v1.10.0
           name: wait-longhorn-manager
       priorityClassName: longhorn-critical
       securityContext:
