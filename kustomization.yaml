@@ -38,3 +38,11 @@ patches:
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
+configMapGenerator:
+- name: grafana-dashboard-longhorn
+  files:
+  - grafana/longhorn.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
